@@ -94,50 +94,15 @@ def buildSaneOutput
         inMath=true
         topicLine=true
       end
-
       inFileIterator+=1
-
     end
-
-
-    # inFile.each_line do |line|
-    #   if line=="Mathematics Assessments*\n"
-    #     p "found in #{fname[schoolIterator]}"
-    #     dataLine=line
-    #
-    #   end
-    #
-    # end
-      schoolIterator+=1
-    # until line=="Mathematics Assessments*\n" do
-    #
-    #   p school
-    #   begin
-    #     p "seeking in #{fname[schoolIterator]}"
-    #     lastline=line
-    #     #Seek till we find math
-    #     until line!=nil do
-    #       line=school.gets
-    #     end
-    #       #break if they didn't have math in the file
-    #     break if line==nil
-    #     puts line
-    #
-    #
-    #
-    #   rescue
-    #     puts "error reading lines from file"
-    #     puts "last line = #{lastline} "
-    #     p "school #{fname[schoolIterator]}"
-    #   end
-    # end
-
-    # outFile.write("{\"#{dataLine}\":\n{")
-
-  outFile.write("}")#close school
+  schoolIterator+=1
+  outFile.write("}")
   end
-  outFile.write("}")#close all
-    outFile.write("}")#close all
+  outFile.write("}")
+    outFile.write("}")
+
+
   #cleanup
   inFiles.each do |inFile|
     inFile.close
@@ -157,7 +122,7 @@ def cleanAscii
 end
 
 
-#fetchFiles
-#decodePdfs
-#cleanAscii
+fetchFiles
+decodePdfs
+cleanAscii
 buildSaneOutput
