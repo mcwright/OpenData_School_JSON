@@ -2,7 +2,7 @@
 A script to extract and transform PEI Dept of Education testing scores for further processing.
 
 #How do?#
-***If you need help, reach out to [Matt Duffy](https://github.com/2manyprojects2littletime) or [Mark Wright](https://github.com/mcwright)and we can try to provide tech support***
+***If you need help, reach out to [Matt Duffy](https://github.com/2manyprojects2littletime) or [Mark Wright](https://github.com/mcwright) and we can try to provide tech support***
 
 ##For the curious:##
 ###Requirements:###
