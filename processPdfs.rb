@@ -7,6 +7,7 @@
 require "net/http"
 require "uri"
 
+# Fetch the files listed in schoolPdfs via Curl and download them to pwd
 def fetchFiles
   pdfList = open("schoolPdfs", 'r')
   pdfList.each do |line|
@@ -15,6 +16,7 @@ def fetchFiles
   pdfList.close
 end
 
+# Using xpdf's pdftoText convert pdfs to text
 def decodePdfs
  workingDir = '.'
  pdfs = Dir.glob("*.pdf")
@@ -25,6 +27,8 @@ def decodePdfs
 
 end
 
+# Refresh the filesystem as required.
+# if someFilename exist it will be deleted and recreated empty.
 def createOrTossFile(someFilename)
   if !File.exist?(someFilename)
     system("touch #{someFilename}")
@@ -34,6 +38,8 @@ def createOrTossFile(someFilename)
   end
 end
 
+# Let the Parsing begin.
+# processes Textfiles and attempts to build out data.json
 def buildSaneOutput
   #open the outFile
   createOrTossFile("data.json")
@@ -110,6 +116,7 @@ def buildSaneOutput
 
 end
 
+# Remove any unicode from all txt files in PWD
 def cleanAscii
 
     txts.each do |txt|
