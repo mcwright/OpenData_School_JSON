@@ -2,7 +2,7 @@
 A script to extract and transform PEI Dept of Education testing scores for further processing.
 
 #How do?#
-***If you need help, reach out to [Matt Duffy](https://github.com/2manyprojects2littletime) and I can try to provide tech support***
+***If you need help, reach out to [Matt Duffy](https://github.com/2manyprojects2littletime) or [Mark Wright](https://github.com/mcwright)and we can try to provide tech support***
 
 ##For the curious:##
 ###Requirements:###
@@ -10,7 +10,7 @@ A script to extract and transform PEI Dept of Education testing scores for furth
 * a terminal to run the commands
 * an internet connection to download the input files
 * ruby - the scripting language used to process the files
-* pdftotext - a unix utility ... might be available to MSWin through Cygwin?
+* [xpdf](http://www.foolabs.com/xpdf/download.html)'s tool pdftotext  (available in Osx, Linux, and Windows)
 
 ###To Run:###
 After making sure you have all the requirements, download the repo as a Zip file (if you're reading this on [github](https://github.com/mcwright/OpenData_School_JSON): the button is above this message, near the right of the screen) and extract the archive to the folder of your choice. (I'm going to assume you've extracted to your user home, `~` on OsX, for future commands)
@@ -21,7 +21,7 @@ Open your terminal and navigate into the project folder:
 
 Execute the script:
 
-`ruby fetchPdfs.rb`
+`ruby processPdfs.rb`
 
 You'll see a wall of text start flying by as the input files are downloaded and processed.
 
@@ -32,8 +32,8 @@ When the script finishes executing, you should now have a bunch of `.pdf` files 
 * git - the source control system
 * github account - not strictly required, but makes getting the code and contributing via pull-request(PR) much easier ***I'm also assuming in the commands below that you've set up ssh keys on your github account***
 * terminal of choice
-* ruby
-* pdftotext
+* ruby 
+* [pdftotext](http://www.foolabs.com/xpdf/download.html) via xpdf
 
 ###To Run:###
 After making sure you have all the requirements, fork the repo on github so you have a copy of the project.
@@ -52,6 +52,6 @@ Navigate into the project folder:
 
 Execute the script:
 
-`ruby fetchPdfs.rb`
+`ruby processPdfs.rb`
 
 If you make changes and would like to contribute them back, pull the most recent copy of the original repo, create a new branch, commit your changes to that branch, check that your changes still work with the most recent code from the original repo, then push that branch to your fork of the repo and create a PR on the original repo for review and integration.
