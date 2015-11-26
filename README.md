@@ -41,6 +41,9 @@ Open your terminal and navigate to the parent folder of where you want to keep t
 Clone your copy of the repo to your machine:
 `git clone git@github.com:YOUR_USERNAME/OpenData_School_JSON.git`
 
+Navigate into the project folder:
+`cd OpenData_School_JSON`
+
 Execute the script:
 `ruby fetchPdfs.rb`
 
