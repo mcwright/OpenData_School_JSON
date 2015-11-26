@@ -118,13 +118,13 @@ end
 
 # Remove any unicode from all txt files in PWD
 def cleanAscii
-
-    txts.each do |txt|
-      #clean it from any unicode chars
-      system("iconv -c -f utf-8 -t ascii #{txt}")
-      system("strings #{txt}>tmpfile")
-      system("strings tmpfile>#{txt}")
-    end
+  txts = Dir.glob("*.txt")
+  txts.each do |txt|
+    #clean it from any unicode chars
+    system("iconv -c -f utf-8 -t ascii #{txt}")
+    system("strings #{txt}>tmpfile")
+    system("strings tmpfile>#{txt}")
+  end
 
 end
 
